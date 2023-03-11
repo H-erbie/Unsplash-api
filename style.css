@@ -1,0 +1,65 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    scrollbar-width: thin;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+body{
+    background: #111;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    
+}
+.app-container{
+    width: inherit;
+    max-height: max-content;
+    height: 100vh;
+    overflow-y: scroll;
+}
+.nav-con{
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+    font-size: 1.4rem;
+    background-color:lightslategray;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 2;
+}
+.app-name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search{
+    font-size: 1.3rem;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    border-color:gray;
+}
+.app-body-con{
+    position: absolute;
+    top: 80px;
+    width: 100vw;
+    height: calc(100vh - 80px);
+    max-height: max-content;
+    display: flex;
+    justify-content: center;
+}
+.app-body{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+}
+.app-body .img{
+    width: 380px;
+    height: 214px;
+}
