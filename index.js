@@ -7,7 +7,6 @@ searchBox.value = '';
 searchBox.addEventListener('keydown', (event) => {
     if(event.key == 'Enter'){
         apiRequest();
-        searchBox.value = '';
     }
 })
 
@@ -16,13 +15,12 @@ searchBox.addEventListener('keydown', (event) => {
 
   
   apiRequest = () => {
-    body.textContent = '';
-    document.querySelector("#grid").textContent = "";
+    body.textContent = "";
   
-    const url = 'https://api.unsplash.com/search/photos?query='+input.value+'&per_page=30&client_id=SouHY7Uul-OxoMl3LL3c0NkxUtjIrKwf3tsGk1JaiVo';
-  
+    const url = 'https://api.unsplash.com/search/photos?query='+searchBox.value+'&per_page=30&client_id=SouHY7Uul-OxoMl3LL3c0NkxUtjIrKwf3tsGk1JaiVo';
+    searchBox.value = '';
     fetch(url)
-  
+    
       .then(response => {
       if (!response.ok) throw Error(response.statusText);
         return response.json();
